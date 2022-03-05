@@ -1,0 +1,82 @@
+/* ----------------------カード ----------------------*/
+.card{
+  margin:50px auto 20px;
+  width:70%;
+  padding:20px 10px;
+  background-color: #d9b26f;
+  border-radius:20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  border:1px solid #000;
+}
+.form_img img{
+  display: block;
+  margin:0 auto;
+  margin-bottom:10px;
+  width:30%;
+}
+.shop_name{
+  line-height: 90px;
+  font-size:35px;
+  margin-left:15px;
+  text-decoration:underline dashed rgb(82, 214, 168);;
+}
+.shop_address span{
+  font-size:25px;
+}
+.shop_address{
+  font-size:23px;
+  vertical-align: top;
+  margin:10px;
+}
+.shop_open{
+  font-size:25px;
+  margin:10px;
+}
+.shop_top{
+  margin:10px auto;
+  display: flex;
+}
+.logo_img img{
+  width:95px;
+  height:95px;
+}
+.shop_img{
+  margin:20px;
+}
+
+/* ---------------------- URL  ----------------------*/
+.url {
+  margin:10px;
+}
+.url a {
+  align-items: center;
+  margin: 10px auto;
+  padding: .6em 1.2em;
+  width: 300px;
+  color: #fff;
+  font-size: 15px;
+  background-color:rgb(40, 60, 87);
+  transition: 0.3s;
+  border-radius:15px;
+}
+.url a:hover {
+  text-decoration: none;
+  background-color:#274C77;
+}
+
+/* ---------------------- ページバック  ----------------------*/
+.back_button{
+  display: block;
+  background-color: rgb(82, 214, 168);
+  border-radius: 100vh;
+  padding: .9em 1.8em;
+  margin:10px auto;
+  border:none;
+}
+.back_button:hover{
+  background-color: rgb(64, 165, 130);
+  transition: .5s;
+}
