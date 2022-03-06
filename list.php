@@ -28,6 +28,7 @@
     $order =$_POST['order'];
     $budget =$_POST['budget'];
     $keyword =$_POST['keyword'];
+    $ktai_coupon = $_POST['ktai_coupon'];
     $api = $hotpepper_API;
     // クエリをまとめる
     $query = [
@@ -40,6 +41,7 @@
       'order' => $order,
       'budget' => $budget,
       'keyword' => $keyword,
+      'ktai_coupon' => $ktai_coupon,
       'format' => 'json', 
     ];
     // グルメサーチAPIからjsonを取得
@@ -58,6 +60,7 @@
       $start = $_POST['start'];
       $budget = $_POST['budget'];
       $keyword = $_POST['keyword'];
+      $ktai_coupon = $_POST['ktai_coupon'];
       // クエリをまとめる
       $query = [
         'key' => $api, 
@@ -69,6 +72,7 @@
         'order' => $order,
         'budget' => $budget,
         'keyword' => $keyword,
+        'ktai_coupon' => $ktai_coupon,
         'count' => 10,
         'format' => 'json', 
       ];
@@ -136,6 +140,7 @@
       <input type="hidden" name="genre" value="<?= $genre;?>">
       <input type="hidden" name="order" value="<?= $order;?>">
       <input type="hidden" name="budget" value="<?= $budget;?>">
+      <input type="hidden" name="ktai_coupon" value="<?= $ktai_coupon;?>">
       <input type="hidden" value="10" name="count">
       <input type="hidden" value="page" name="page">
       <input class="page_button font"  value="<?= $j+1;?>" type="submit" <?php if($json['results']['results_start'] == $j*10+1){echo "style = 'background-color:rgba(123, 123, 123, 0.755) ;' " ;}?>>
@@ -244,6 +249,7 @@
       <input type="hidden" name="genre" value="<?= $genre;?>">
       <input type="hidden" name="order" value="<?= $order;?>">
       <input type="hidden" name="budget" value="<?= $budget;?>">
+      <input type="hidden" name="ktai_coupon" value="<?= $ktai_coupon;?>">
       <input type="hidden" value="10" name="count">
       <input type="hidden" value="page" name="page">
       <input class="page_button font"  value="<?= $j+1;?>" type="submit" <?php if($json['results']['results_start'] == $j*10+1){echo "style = 'background-color:rgba(123, 123, 123, 0.755) ;' " ;}?>>

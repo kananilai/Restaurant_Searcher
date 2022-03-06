@@ -117,6 +117,15 @@
           </td>
         </tr>
         <tr>
+          <td class="row" align="right">
+            <label class="font label_text" align="right">クーポンの有無</label>
+          </td>
+          <td class="row">
+            <label for="yes">あり <input id="yes" type="radio" name="ktai_coupon" value="0"></label>
+            <label for="no">なし <input id="no" type="radio" name="ktai_coupon" value="1"></label>
+          </td>
+        </tr>
+        <tr>
           <td colspan="2" class="row" align="center">
             <button type="submit" class="font search_buttton"  id="search_buttton">検索する</button>
           </td>
