@@ -78,16 +78,33 @@
       $response = file_get_contents($url);
       $json = json_decode($response, true);
     }
+    //半径代入
+
+    switch($ranges){
+      case "1":
+        $show_range = "300m";
+        break;
+      case "2";
+        $show_range = "500m";
+        break;
+      case "3":
+        $show_range = "1km";
+        break;
+      case "4":
+        $show_range = "2km";
+        break;
+      case "5":
+        $show_range = "3km";
+        break;
+    }
   ?>
 </head>
 <body>
   <div class="main">
   <?php if($json['results']['results_available'] == 0): ?>
     <p class="find font">条件に一致するものが見つかりませんでした…</p>
-  <?php elseif($json['results']['results_available'] <= 10):?>
-    <p class="find font"><?= $json['results']['results_available']; ?>件見つかりました。</p>
-  <?php else :?>
-    <p class="find font"><?= $json['results']['results_available']; ?>件見つかりました。</p>
+  <?php else:?>
+    <p class="find font">現在地から半径<?= $show_range ;?>で、<?= $json['results']['results_available']; ?>件見つかりました。</p>
   <?php endif;?>
   <!-- ページバック -->
   <button onclick="location.href='index.php'" class="back_button font">検索画面に戻る</button>
@@ -212,7 +229,33 @@
     </div>
   </div>
   <?php endfor; ?>
+    <!-- ページネーション -->
+    <div class="pagenate">
+  <?php 
+    if($json['results']['results_available'] > 10):
+    $i = ceil($json['results']['results_available']/10);
+    for($j=0; $j<$i; $j++):
+  ?>
+    <form method="POST" class="search_form">
+      <input type="hidden" name="page_latitude" id="latitude" value="<?= $latitude?>">
+      <input type="hidden" name="page_longitude" id="longitude" value="<?= $longitude?>">
+      <input type="hidden" name="ranges" value="<?= $ranges;?>">
+      <input type="hidden" name="start" value="<?= $j*10+1;?>">
+      <input type="hidden" name="genre" value="<?= $genre;?>">
+      <input type="hidden" name="order" value="<?= $order;?>">
+      <input type="hidden" name="budget" value="<?= $budget;?>">
+      <input type="hidden" value="10" name="count">
+      <input type="hidden" value="page" name="page">
+      <input class="page_button font"  value="<?= $j+1;?>" type="submit" <?php if($json['results']['results_start'] == $j*10+1){echo "style = 'background-color:rgba(123, 123, 123, 0.755) ;' " ;}?>>
+    </form>
+  <?php 
+    endfor;
+    endif;
+  ?>
+  </div>
   <!-- ページバック -->
-  <button onclick="location.href='index.php'" class="back_button back_button_bottom font">検索画面に戻る</button>
+  <?php if($json['results']['results_available'] > 10): ?>
+    <button onclick="location.href='index.php'" class="back_button back_button_bottom font">検索画面に戻る</button>
+  <?php endif; ?>
 </body>
 </html>

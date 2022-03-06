@@ -171,12 +171,14 @@
   }
   .card_text{
     font-size: 1.4em;
+    margin:10px;
   }
   .coupon{
     display: none;
   }
   .coupon_responsive{
     padding:10px;
+    margin:5px;
   }
   .img_responsive{
     padding:10px;
