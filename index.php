@@ -121,8 +121,9 @@
             <label class="font label_text" align="right">クーポンの有無</label>
           </td>
           <td class="row">
-            <label for="yes">あり <input id="yes" type="radio" name="ktai_coupon" value="0"></label>
-            <label for="no">なし <input id="no" type="radio" name="ktai_coupon" value="1"></label>
+            <label for="not_specified"><input id="not_specified" type="radio" name="ktai_coupon" value="" checked>指定なし</label>
+            <label for="yes"><input id="yes" type="radio" name="ktai_coupon" value="0">あり</label>
+            <label for="no"><input id="no" type="radio" name="ktai_coupon" value="1">なし</label>
           </td>
         </tr>
         <tr>
