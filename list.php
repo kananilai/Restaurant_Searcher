@@ -143,7 +143,7 @@
         <table>
           <tr>
             <td class="td_left" align="right">
-              <p class="font catd_title">最寄り駅：</p>
+              <p class="font card_title">最寄り駅：</p>
             </td>
             <td class="td_right">
               <p class="font station card_text"><?php echo $json["results"]["shop"][$k]["station_name"]; ?>駅</p>
@@ -151,7 +151,7 @@
           </tr>
           <tr>
             <td class="td_left" align="right">
-              <p class="font catd_title">アクセス：</p>
+              <p class="font card_title">アクセス：</p>
             </td>
             <td>
               <p class="font shop_access card_text"><?php echo $json["results"]["shop"][$k]["access"]; ?></p>
@@ -159,7 +159,7 @@
           </tr>
           <tr>
             <td class="td_left" align="right">
-              <p class="font catd_title">ジャンル：</p>
+              <p class="font card_title">ジャンル：</p>
             </td>
             <td>
               <p class="font card_text"><?=  $json["results"]["shop"][$k]["genre"]["name"];?></p>
@@ -167,7 +167,7 @@
           </tr>
           <tr>
             <td class="td_left" align="right">
-              <p class="font catd_title">平均予算：</p>
+              <p class="font card_title">平均予算：</p>
             </td>
             <td>
               <p class="font card_text"><?=  $json["results"]["shop"][$k]["budget"]["average"];?></p>
@@ -175,25 +175,31 @@
           </tr>
           <tr>
             <td class="td_left" align="right">
-              <p class="font catd_title">メッセージ：</p>
+              <p class="font card_title">メッセージ：</p>
             </td>
             <td>
               <p class="font card_text catch"><?=  $json["results"]["shop"][$k]["catch"];?></p>
             </td>
           </tr>
-          <tr>
-            <td class="coupon_responsive" align="center">
+          <tr class="coupon_responsive">
+            <td colspan="2" align="center"">
             <?php if($json["results"]["shop"][$k]["ktai_coupon"] == 0):?>
               <p class="coupon_text">クーポンあり！!</p>
             <?php endif; ?>
             </td>
           </tr>
-          <tr colspan="2">
-            <td class="td_left" align="center">
+          <tr class="img_responsive">
+            <td align="center" colspan="2" class="img_responsive">
+              <img  src="<?= $json["results"]["shop"][$k]["logo_image"]; ?>" alt="サムネイル">
+            </td>
+            
+          </tr>
+          <tr>
+            <td class="td_left" align="center" colspan="2">
               <form action="show.php" method="POST">
                 <input type="hidden" value="<?= $json["results"]["shop"][$k]["id"];?>" name="id">
                 <input type="submit" value="詳細" class="font detail_button">
-              </form>  
+              </form>
             </td>
           </tr>
         </table>

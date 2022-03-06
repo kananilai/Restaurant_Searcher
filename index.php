@@ -108,7 +108,7 @@
           </td>
         </tr>
         <tr>
-          <td class="row">
+          <td class="row" align="right">
             <label class="font label_text" align="right">キーワードで絞る</label>
           </td>
           <td class="row">

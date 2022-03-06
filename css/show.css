@@ -20,28 +20,7 @@
 .shop_name{
   line-height: 90px;
   font-size:35px;
-  margin-left:15px;
   text-decoration:underline dashed rgb(82, 214, 168);;
-}
-.shop_address span{
-  font-size:25px;
-}
-.shop_address{
-  font-size:23px;
-  vertical-align: top;
-  margin:10px;
-}
-.shop_open{
-  font-size:25px;
-  margin:10px;
-}
-.shop_top{
-  margin:10px auto;
-  display: flex;
-}
-.logo_img img{
-  width:95px;
-  height:95px;
 }
 .shop_img{
   margin:20px;
@@ -79,4 +58,48 @@
 .back_button:hover{
   background-color: rgb(64, 165, 130);
   transition: .5s;
+}
+
+/* ---------------------- レスポンシブ(768px以上) ----------------------*/
+@media only screen and (min-width:768px) {
+  .shop_top{
+    margin:10px auto;
+    display:flex;
+  }
+  .shop_name{
+    margin-left: 15px;
+  }
+  .shop_address span{
+    font-size:25px;
+  }
+  .shop_address{
+    font-size:23px;
+    vertical-align: top;
+    margin:10px;
+  }
+  .shop_open{
+    font-size:25px;
+    margin:10px;
+  }
+}
+
+/* ---------------------- レスポンシブ  ----------------------*/
+@media only screen and (max-width:768px) {
+  .shop_name{
+    font-size:20px;
+  }
+  .shop_address{
+    margin:5px;;
+  }
+  .shop_open,
+  .shop_address{
+    font-size:.8em;
+  }
+  .shop_img img{
+    width:80%;
+    height:50%;
+  }
+  .url a{
+    padding:.4em .2em;
+  }
 }

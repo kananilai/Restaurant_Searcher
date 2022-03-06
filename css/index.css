@@ -75,3 +75,17 @@ body{
   display:block;
   line-height: 40px;
 }
+
+/* ---------------------- レスポンシブ  ----------------------*/
+@media only screen and (max-width:768px) {
+  .credit{
+    font-size:10px;
+  }
+  .label_text{
+    font-size:.5em;
+  }
+  .row{
+    padding:5px;
+    width:100px;
+  }
+}

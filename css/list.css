@@ -56,7 +56,7 @@
   justify-content: space-between;
   margin: 30px auto;
   width:80%;
-  padding:20px 25px;
+  padding:20px;
   border-radius:30px;
   background-color: #d9b26f;
   border:1px solid #000;
@@ -70,7 +70,7 @@
 
 /* ---------------------- テーブル ---------------------- */
 .td_left{
-  width:120px;
+  width:170px;
   height:20px;
   padding:8px;
 }
@@ -86,7 +86,7 @@
   margin-right:20px;
 }
 .card_content{
-  padding: 13px;
+  padding: 10px;
 }
 .name{
   padding-bottom:10px;
@@ -101,7 +101,7 @@
 .card_text{
   font-size:18px;
 }
-.catd_title{
+.card_title{
   font-size: 20px;;
 }
 
@@ -126,7 +126,6 @@
   display: block;
 }
 .coupon_text{
-  width:70%;
   margin-right:10px;
   position: relative;
   display: inline-block;
@@ -146,23 +145,54 @@
   border-radius: 50%;
   background: #fff;
 }
-.coupon_responsive{
+/* ---------------------- レスポンシブ(768以上)  ----------------------*/
+@media only screen and (min-width:768px) {
+  .coupon_responsive{
   display:none;
+  }
+  .coupon_text{
+    width:70%;
+  }
+  .img_responsive{
+    display: none;;
+  }
 }
 
+/* ---------------------- レスポンシブ  ----------------------*/
 @media only screen and (max-width:768px) {
+  .find{
+    font-size:25px;
+  }
+  .card_img{
+    display:none;
+  }
+    .card_title{
+    font-size: 1em;
+  }
+  .card_text{
+    font-size: 1.4em;
+  }
   .coupon{
     display: none;
   }
   .coupon_responsive{
-    display: block;
     padding:10px;
   }
-  .coupon_text{
-    width:100%;
+  .img_responsive{
+    padding:10px;
   }
 }
 
 .back_button_bottom{
   margin-bottom:20px;
 }
+
+@media only screen and (max-width:576px) {
+  .card_title{
+    font-size: .1em;
+  }
+  .card_text{
+    font-size: 1em;
+  }
+}
+
