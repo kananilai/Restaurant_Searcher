@@ -46,6 +46,7 @@ body{
   border:none;
   padding:5px 20px;
   font-size:20px;
+  transition: .5s;
 }
 .search_buttton:hover{
   background-color: rgb(64, 165, 130);

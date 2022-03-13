@@ -22,6 +22,7 @@
   padding: .7em 1.8em;
   margin:0 auto;
   border:none;
+  transition: .5s;
 }
 .back_button:hover{
   background-color: rgb(64, 165, 130);
@@ -40,14 +41,34 @@
   padding: .8em 1.2em;
   margin:0 auto;
   background-color: rgba(255, 255, 255, 0);
+  transition: .5s;
 }
 .page_button:hover{
   background-color: rgba(106, 106, 106, 0.385);
   transition: .5s;
 }
-.search_form{
+.search_form table{
   display: inline-block;
   justify-content: center;
+}
+
+/*----------------------- 再検索 ---------------------- */
+.research_button{
+  font-size:10px;
+  display: block;
+  background-color: rgb(60, 109, 172);
+  border-radius: 100vh;
+  padding: .7em 1.8em;
+  margin:0 auto;
+  border:none;
+  transition: .5s;
+}
+.research_button:hover{
+  background-color: rgb(97, 131, 175);
+  transition: .5s;
+}
+.research{
+  text-align: center;
 }
 
 /*----------------------- カード ---------------------- */
